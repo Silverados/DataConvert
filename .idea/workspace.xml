@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dd2624b7-dd70-4962-bc8c-c68393bc71aa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/etc/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/etc/tags.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputDir/demo.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/AppContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/Constant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/Converter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/config/BaseConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/input/ExcelInputParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/input/InputFileExtensionEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/input/InputParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/input/InputParserFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/input/XlsInputParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/input/XlsxInputParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/output/CSharpOutputFormat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/output/JavaOutputFormat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/output/OutputFormat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/output/OutputFormatEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/output/OutputFormatFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/serialize/BodyTitle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/serialize/ColumnData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/serialize/ConvertCell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/serialize/ConvertConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/serialize/FieldDefineData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/serialize/InputBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/serialize/InputDO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/serialize/InputHead.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/serialize/OutputFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/serialize/RowData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/serialize/Tag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/util/JsonUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wyw/util/StringUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/wyw/AppTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2LzTuGvgzyKX1JEDfcxTd8TWYbt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "extract.method.default.visibility": "private",
+    "last_opened_file_path": "D:/code/DataConvert/inputDir",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "advanced.settings"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.wyw.serialize" />
+      <recent name="com.wyw.input" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\code\DataConvert\inputDir" />
+      <recent name="D:\code\DataConvert" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wyw.App" />
+      <module name="DataConvert" />
+      <option name="PROGRAM_PARAMETERS" value="-cs -t tag" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wyw.config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dd2624b7-dd70-4962-bc8c-c68393bc71aa" name="Changes" comment="" />
+      <created>1676873131962</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676873131962</updated>
+      <workItem from="1676873133106" duration="224000" />
+      <workItem from="1676873469961" duration="25631000" />
+      <workItem from="1677037002623" duration="24720000" />
+      <workItem from="1677132423719" duration="883000" />
+      <workItem from="1677136540126" duration="75690000" />
+      <workItem from="1677807479390" duration="31639000" />
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="com.alibaba.fastjson2.JSONException" package="com.alibaba.fastjson2" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="13" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="17" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

@@ -1,0 +1,16 @@
+{
+  "tag": {
+    "input_file": "demo.xlsx",
+    "output_files": [
+      {"sheet_name": "Sheet1", "output_dir": ""},
+      {"sheet_name": "Sheet2", "output_dir": ""}
+    ]
+  },
+  "tag2": {
+    "input_file": "demo.xlsx",
+    "output_files": [
+      {"sheet_name": "Sheet1", "output_dir": ""},
+      {"sheet_name": "Sheet2", "output_dir": ""}
+    ]
+  }
+}

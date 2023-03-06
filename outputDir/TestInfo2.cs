@@ -1,0 +1,3 @@
+public namespace Test {
+
+}

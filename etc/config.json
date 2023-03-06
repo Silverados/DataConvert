@@ -1,0 +1,5 @@
+{
+  "output_formats": ["Java", "CSharp"],
+  "input_root_path": "inputDir",
+  "output_root_path": "outputDir"
+}
