@@ -228,7 +228,7 @@ public class JavaOutputFormat extends OutputFormat {
     }
 
     private String getLanguageTypeValue(String type, String value) {
-        value = value.replaceAll("\\s", "");
+        value = value.replaceAll("\\n", "");
         var languageType = getLanguageType(type);
         if (value.isEmpty()) {
             return value;

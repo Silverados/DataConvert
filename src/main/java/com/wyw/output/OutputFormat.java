@@ -27,6 +27,9 @@ public abstract class OutputFormat {
     public static final Pattern CUSTOM_BLOCK_PATTERN2 = Pattern.compile(CUSTOM_BLOCK_START2 + "([\\s\\S]*)" + CUSTOM_BLOCK_END2, Pattern.UNICODE_CHARACTER_CLASS);
     public static final Pattern CUSTOM_BLOCK_PATTERN3 = Pattern.compile(CUSTOM_BLOCK_START3 + "([\\s\\S]*)" + CUSTOM_BLOCK_END3, Pattern.UNICODE_CHARACTER_CLASS);
 
+    public static final Pattern GENERIC_PATTERN = Pattern.compile("\\w+<(.*)>");
+    public static final Pattern LAMBDA_DIGIT_PATTERN = Pattern.compile(".*(\\d+).*");
+
     protected static EnumMap<OutputFormatEnum, Map<String, String>> languageTypeCache = new EnumMap<>(OutputFormatEnum.class);
 
     protected final String TEMPLATE;

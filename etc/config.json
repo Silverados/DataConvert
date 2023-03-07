@@ -1,5 +1,5 @@
 {
-  "output_formats": ["Java", "CSharp"],
+  "output_formats": ["Json", "CSharp"],
   "input_root_path": "inputDir",
-  "output_root_path": "D:\\job\\a5\\FightVerificationServer\\PatchCode\\Config"
+  "output_root_path": "outputDir"
 }

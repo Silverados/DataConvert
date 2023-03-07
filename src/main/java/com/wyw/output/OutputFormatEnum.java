@@ -4,7 +4,8 @@ import java.util.function.Supplier;
 
 public enum OutputFormatEnum {
     Java(JavaOutputFormat::new, "java"),
-    CSharp(CSharpOutputFormat::new, "cs");
+    CSharp(CSharpOutputFormat::new, "cs"),
+    Json(JsonOutputFormat::new, ".json");
 
     private final Supplier<OutputFormat> noArgConstructor;
     public final String fileExtension;
