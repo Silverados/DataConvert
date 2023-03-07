@@ -6,12 +6,12 @@ import com.wyw.util.StringUtils;
 
 import java.io.IOException;
 import java.nio.file.Path;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class JavaOutputFormat extends OutputFormat {
+    public static final Pattern pattern = Pattern.compile("\\w+<(.*)>");
     private static boolean exportBaseConfig = true;
 
     @Override
@@ -148,14 +148,14 @@ public class JavaOutputFormat extends OutputFormat {
     private String initData(int beginRowIndex, int endRowIndex) {
         StringBuilder sb = new StringBuilder();
         for (; beginRowIndex < endRowIndex; beginRowIndex++) {
-            var primaryKey = getCell(beginRowIndex, 0);
+            var primaryKey = getCell(beginRowIndex, titles.get(0).columnIndex);
             var type = titles.get(0).fieldDefineDataList.get(index).fieldType;
             sb.append(String.format("        datas.put(%s, new %s() {{\n", getLanguageTypeValue(type, primaryKey.val), exportFileName));
             for (int i = 1; i < titles.size(); i++) {
                 var title = titles.get(i);
                 var field = title.fieldDefineDataList.get(index);
                 var name = "set" + StringUtils.upperFirstCharacter(field.fieldName);
-                var value = getLanguageTypeValue(field.fieldType, getCell(beginRowIndex, i).val);
+                var value = getLanguageTypeValue(field.fieldType, getCell(beginRowIndex, title.columnIndex).val);
                 if (value.isEmpty()) {
                     continue;
                 }
@@ -166,15 +166,14 @@ public class JavaOutputFormat extends OutputFormat {
         return sb.toString();
     }
 
-    private ConvertCell getCell(int rowIndex, int listIndex) {
-        return rows.get(rowIndex).cells.get(listIndex);
+    private ConvertCell getCell(int rowIndex, int columnIndex) {
+        return rows.get(rowIndex).cells.get(columnIndex);
     }
-
 
     private String genInitMethodsInvoke() {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < getCodeSegmentLimit(); i++) {
-            sb.append(String.format("           initData%d(datas);", i));
+            sb.append(String.format("            initData%d(datas);", i));
             if (i != getCodeSegmentLimit() - 1) {
                 sb.append("\n");
             }
@@ -212,7 +211,7 @@ public class JavaOutputFormat extends OutputFormat {
     }
 
     @Override
-    protected String getLanguageType(String type) {
+    protected String getLanguageTypeString(String type) {
         var lowerFirstCharacterType = StringUtils.lowerFirstCharacter(type);
         if ("str".equals(lowerFirstCharacterType) || "string".equals(lowerFirstCharacterType)) {
             return "String";
@@ -227,7 +226,6 @@ public class JavaOutputFormat extends OutputFormat {
         }
         return type;
     }
-
 
     private String getLanguageTypeValue(String type, String value) {
         value = value.replaceAll("\\s", "");
@@ -288,7 +286,7 @@ public class JavaOutputFormat extends OutputFormat {
         }
 
         return switch (languageType) {
-            case "int", "Integer" -> String.valueOf((int)Double.parseDouble(value));
+            case "int", "Integer" -> String.valueOf((int) Double.parseDouble(value));
             case "String" -> '"' + value + '"';
             case "long", "Long" -> value + 'L';
             case "float", "Float" -> value + 'F';
@@ -297,7 +295,6 @@ public class JavaOutputFormat extends OutputFormat {
 
     }
 
-    public static final Pattern pattern = Pattern.compile("\\w+<(.*)>");
     private String getFromGeneric(String type) {
         type = type.replace(" ", "");
         Matcher matcher = pattern.matcher(type);

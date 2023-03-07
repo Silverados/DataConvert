@@ -2,6 +2,8 @@ package com.wyw.util;
 
 import lombok.experimental.UtilityClass;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -49,4 +51,24 @@ public class StringUtils {
         }
         return Character.toUpperCase(str.charAt(0)) + str.substring(1);
     }
+
+    public static List<String> splitString(String inputString) {
+        List<String> result = new ArrayList<>();
+        int bracketCount = 0;
+        int startIndex = 0;
+        for (int i = 0; i < inputString.length(); i++) {
+            char ch = inputString.charAt(i);
+            if (ch == ',' && bracketCount == 0) {
+                result.add(inputString.substring(startIndex, i).trim());
+                startIndex = i + 1;
+            } else if (ch == '<') {
+                bracketCount++;
+            } else if (ch == '>') {
+                bracketCount--;
+            }
+        }
+        result.add(inputString.substring(startIndex).trim());
+        return result;
+    }
+
 }

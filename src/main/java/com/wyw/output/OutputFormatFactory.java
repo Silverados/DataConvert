@@ -5,7 +5,7 @@ public class OutputFormatFactory {
     public static OutputFormat getOutputFormat(String formatName) {
         OutputFormatEnum outputFormatEnum = OutputFormatEnum.valueOf(formatName);
         var outputFormat = outputFormatEnum.getNoArgConstructor().get();
-        outputFormat.type = outputFormatEnum;
+        outputFormat.formatEnum = outputFormatEnum;
         return outputFormat;
     }
 

@@ -5,10 +5,7 @@ import org.apache.poi.ss.usermodel.*;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 /**
  * -----------------------------------------------------
@@ -104,15 +101,16 @@ public abstract class ExcelInputParser extends InputParser {
                 if (sheet.getRow(rowIndex) == null) {
                     continue;
                 }
-                var cells = new ArrayList<ConvertCell>(titles.size());
+                var cells = new HashMap<Integer, ConvertCell>(titles.size());
                 for (var i = 0; i < titles.size(); i++) {
                     var title = titles.get(i);
                     var cell = sheet.getRow(rowIndex).getCell(title.columnIndex);
+                    // 第一个必须为主键 主键未设置抛弃整行
                     if (i == 0 && cell == null) {
                         breakFlag = true;
                         break;
                     }
-                    cells.add(new ConvertCell(rowIndex, title.columnIndex, cell, getStringCellValue(cell)));
+                    cells.put(title.columnIndex, new ConvertCell(rowIndex, title.columnIndex, cell, getStringCellValue(cell)));
                 }
                 if (breakFlag) {
                     continue;

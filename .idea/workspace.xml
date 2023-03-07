@@ -8,8 +8,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd2624b7-dd70-4962-bc8c-c68393bc71aa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etc/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/etc/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inputDir/demo.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/inputDir/demo.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wyw/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wyw/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wyw/input/ExcelInputParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wyw/input/ExcelInputParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wyw/output/CSharpOutputFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wyw/output/CSharpOutputFormat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wyw/output/JavaOutputFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wyw/output/JavaOutputFormat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wyw/output/OutputFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wyw/output/OutputFormat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wyw/output/OutputFormatFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wyw/output/OutputFormatFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wyw/serialize/BodyTitle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wyw/serialize/BodyTitle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wyw/serialize/RowData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wyw/serialize/RowData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wyw/util/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wyw/util/StringUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +138,7 @@
       <workItem from="1677037002623" duration="24720000" />
       <workItem from="1677132423719" duration="883000" />
       <workItem from="1677136540126" duration="75690000" />
-      <workItem from="1677807479390" duration="32052000" />
+      <workItem from="1677807479390" duration="51076000" />
     </task>
     <servers />
   </component>
@@ -151,6 +161,15 @@
           <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="17" />
         </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NumberFormatException" package="java.lang" />
+          <option name="timeStamp" value="22" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/wyw/output/CSharpOutputFormat.java</url>
+          <line>163</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

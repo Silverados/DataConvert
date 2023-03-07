@@ -27,8 +27,10 @@ public abstract class OutputFormat {
     public static final Pattern CUSTOM_BLOCK_PATTERN2 = Pattern.compile(CUSTOM_BLOCK_START2 + "([\\s\\S]*)" + CUSTOM_BLOCK_END2, Pattern.UNICODE_CHARACTER_CLASS);
     public static final Pattern CUSTOM_BLOCK_PATTERN3 = Pattern.compile(CUSTOM_BLOCK_START3 + "([\\s\\S]*)" + CUSTOM_BLOCK_END3, Pattern.UNICODE_CHARACTER_CLASS);
 
+    protected static EnumMap<OutputFormatEnum, Map<String, String>> languageTypeCache = new EnumMap<>(OutputFormatEnum.class);
+
     protected final String TEMPLATE;
-    public OutputFormatEnum type;
+    public OutputFormatEnum formatEnum;
     // 标识是第几个导出的format
     public int index;
     public Map<String, String> attrDefine;
@@ -48,7 +50,7 @@ public abstract class OutputFormat {
     }
 
     public void output() throws IOException {
-        outputFile = Path.of(context.convertConfig.outputRootPath, inputDO.outputFile.outputDir, exportFileName + "." + type.fileExtension);
+        outputFile = Path.of(context.convertConfig.outputRootPath, inputDO.outputFile.outputDir, exportFileName + "." + formatEnum.fileExtension);
         attrDefine();
         var outputString = StringUtils.replaceTemplate(TEMPLATE, attrDefine);
         output(outputFile, outputString);
@@ -94,8 +96,17 @@ public abstract class OutputFormat {
     }
 
     protected String getLanguageType(String type) {
-        return type;
+        var cache = getLanguageTypeCache(formatEnum);
+        if (cache.containsKey(type)) {
+            return cache.get(type);
+        }
+
+        var ret = getLanguageTypeString(type);
+        cache.put(type, ret);
+        return ret;
     }
+
+    protected abstract String getLanguageTypeString(String type);
 
     public abstract String setTemplate();
 
@@ -106,6 +117,7 @@ public abstract class OutputFormat {
         titles = new ArrayList<>(inputDO.body.titles.size());
         rows = inputDO.body.rows;
         titlesValid(inputDO.body.titles);
+        setLanguageTypeCache(formatEnum, new HashMap<>());
     }
 
     private void titlesValid(List<BodyTitle> rawTitles) {
@@ -117,7 +129,7 @@ public abstract class OutputFormat {
             }
             var fieldName = field.fieldName;
             if (set.contains(fieldName)) {
-                throw new RuntimeException("Duplicate title name: " + fieldName + ", Column Index: " + title.columnIndex + ", Convert type: " + type);
+                throw new RuntimeException("Duplicate title name: " + fieldName + ", Column Index: " + title.columnIndex + ", Convert type: " + formatEnum);
             }
             set.add(fieldName);
             titles.add(title);
@@ -132,4 +144,11 @@ public abstract class OutputFormat {
         return 500;
     }
 
+    protected final void setLanguageTypeCache(OutputFormatEnum key, Map<String, String> value) {
+        languageTypeCache.put(key, value);
+    }
+
+    protected final Map<String, String> getLanguageTypeCache(OutputFormatEnum outputFormatEnum) {
+        return languageTypeCache.get(outputFormatEnum);
+    }
 }
